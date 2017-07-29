@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    function reverse(arr){
+      var len = arr.length;
+      var l = len-1;
+      var a = arr[0];
+      arr[0] = arr[l];
+      arr[l] = a;
+    //  console.log(l);
+      for(var i = 1;i<len ; i++){
+        var x = arr[i];
+        console.log(i);
+        console.log(x);
+        arr[i] = arr[l-1];
+        console.log(arr[i]);
+        arr[l-1] = x;
+        console.log(arr[l-1]);
+        console.log(l);
+        if(l-1 == 1){
+          console.log("too small");
+          console.log(arr);
+         return(arr);
+        }
+        l--;
+
+      }
+      console.log("got here");
+      console.log(arr);
+    }
+    var arr = [1,2,3,4];
+    reverse(arr);
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

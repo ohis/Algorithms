@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    function minTofront(arr){
+      var len = arr.length;
+      var min = arr[0];
+      var index;
+      for(var i = 0; i < len; i++){
+        if(min > arr[i]){
+          min = arr[i];
+          index = i;
+        }
+      }
+      console.log(min);
+      console.log(arr[0]);
+      if(min == arr[0]){
+        //console.log(index);
+        console.log(arr);
+        return arr;
+      }
+      var a = arr[0];
+      var b = arr[index];
+      arr[0] = arr[index];
+      arr[index] = a;
+
+      for(var j = index; j > 1; j--){
+        var x = arr[j];
+        var y = arr[j-1];
+        arr[j] = arr[j-1];
+        arr[j-1] = x;
+      }
+      console.log(arr);
+    }
+
+  //  var arr = [4,2,1,3,6];
+  //var arr = [0,1,3,2,6];
+    var arr = [3,2,4,1];
+    minTofront(arr);
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
