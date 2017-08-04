@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+
+    //needs fixing not working in all cases
+      function rotateArr(arr, shiftBy){
+        var len = arr.length;
+        var x;var y; var z;
+        for(var i = len-1; i > 0; i--){
+          if(i + shiftBy > len){
+            x = arr[i];
+            z = i + shiftBy - len;
+            console.log(z);
+            y = arr[z];
+            console.log("val pf y");
+            console.log(y);
+            arr[z] = x;
+            console.log("arr of z");
+            console.log(arr[z]);
+          }
+          else{
+            if(i == z + 1){
+              console.log("equal");
+              console.log(i);
+              x = arr[i];
+              console.log(x);
+              arr[i+1] = x;
+              arr[i] = y;
+              console.log("y again");
+              console.log(y);
+
+            }//else{
+            //  x = arr[i];
+            //  arr[i+1] = x;
+          //   console.log("other else");
+          //    console.log(i);
+            //  console.log(arr[i+1]);
+          //  }
+          }
+        }
+        console.log(arr);
+        return arr;
+      }
+
+      var arr = [8,5,10,11];
+      var shift = 2;
+
+   var ans = rotateArr(arr, shift);
+   console.log(ans);
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
